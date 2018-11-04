@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">yourmart.com</a>
+    <div id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/home">Home</a>
+        <a class="nav-item nav-link" *ngIf="!isLoggedIn" routerLink="/login">Login</a>
+        <a class="nav-item nav-link" *ngIf="!isLoggedIn" routerLink="/register">Register</a>
+        <a class="nav-item nav-link" *ngIf="!isLoggedIn"  routerLink="/editor">Add Product</a>
+        <a class="nav-item nav-link" *ngIf="isLoggedIn" [routerLink]="['/profile',username]">{{ username }}</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
